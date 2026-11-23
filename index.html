@@ -20,32 +20,52 @@
 
         * {
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #101722;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(52, 120, 199, 0.09), transparent 30%),
+                radial-gradient(circle at 90% 70%, rgba(52, 120, 199, 0.07), transparent 30%),
+                #101722;
             color: #e8edf5;
         }
 
         /* Presentación */
 
         .inicio {
-            background-color: #192536;
-            padding: 65px 20px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(120deg, #192536, #203751, #192536);
+            padding: 75px 20px;
             border-bottom: 3px solid #3478c7;
         }
 
+        .inicio::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(67, 143, 224, 0.12);
+            filter: blur(65px);
+            right: 10%;
+            top: -170px;
+        }
+
         .contenido-inicio {
+            position: relative;
             max-width: 1000px;
             margin: auto;
         }
 
         .inicio h1 {
-            font-size: 36px;
+            font-size: 38px;
             margin-top: 0;
             margin-bottom: 12px;
+            letter-spacing: 0.4px;
         }
 
         .inicio h2 {
@@ -56,17 +76,19 @@
         }
 
         .linea {
-            width: 65px;
+            width: 70px;
             height: 4px;
-            background-color: #438fe0;
+            background: linear-gradient(90deg, #438fe0, #8eb9ec);
+            border-radius: 5px;
             margin-top: 25px;
+            box-shadow: 0 0 12px rgba(67, 143, 224, 0.4);
         }
 
         /* Contenido principal */
 
         main {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 45px auto;
             padding: 0 20px;
         }
 
@@ -75,45 +97,134 @@
         .titulo-apartado {
             color: #70aef0;
             font-size: 21px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .titulo-apartado::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 23px;
+            background-color: #438fe0;
+            border-radius: 5px;
+            box-shadow: 0 0 9px rgba(67, 143, 224, 0.4);
         }
 
         /* Recuadros */
 
         .apartado {
-            background-color: #192536;
-            padding: 25px;
+            background: linear-gradient(145deg, #192536, #172333);
+            padding: 27px;
             border: 1px solid #2c3c50;
-            border-radius: 7px;
-            margin-bottom: 30px;
+            border-radius: 9px;
+            margin-bottom: 35px;
             min-height: 130px;
-            transition: border-color 0.2s;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
         }
 
         .apartado:hover {
             border-color: #438fe0;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(52, 120, 199, 0.09);
         }
 
         .apartado p {
             color: #b8c4d3;
             font-size: 15px;
-            line-height: 1.8;
+            line-height: 1.9;
             margin: 0 0 25px 0;
+            text-align: justify;
         }
 
         .apartado p:last-child {
             margin-bottom: 0;
         }
 
+        .apartado strong {
+            color: #d9eaff;
+        }
+
+        /* Mis compañeros */
+
+        .companeros-descripcion {
+            color: #b8c4d3;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .companeros-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .companero {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 115px;
+            padding: 21px;
+            background: linear-gradient(145deg, #192536, #172333);
+            border: 1px solid #2c3c50;
+            border-radius: 9px;
+            text-decoration: none;
+            overflow: hidden;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .companero::before {
+            content: "";
+            position: absolute;
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            background: rgba(67, 143, 224, 0.08);
+            right: -30px;
+            top: -30px;
+            transition: transform 0.3s;
+        }
+
+        .companero:hover {
+            transform: translateY(-4px);
+            border-color: #438fe0;
+            box-shadow: 0 8px 22px rgba(52, 120, 199, 0.13);
+        }
+
+        .companero:hover::before {
+            transform: scale(1.5);
+        }
+
+        .companero h3 {
+            position: relative;
+            color: #e8edf5;
+            font-size: 16px;
+            line-height: 1.5;
+            margin: 0 0 17px 0;
+        }
+
+        .companero span {
+            position: relative;
+            color: #70aef0;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
         /* Pie de página */
 
         footer {
             text-align: center;
-            padding: 25px;
+            padding: 28px 20px;
             border-top: 1px solid #29384a;
             color: #8190a3;
             font-size: 13px;
-            background-color: #0c121b;
+            background: linear-gradient(180deg, #101722, #0c121b);
         }
 
         /* Adaptación para celulares */
@@ -121,11 +232,12 @@
         @media (max-width: 650px) {
 
             .inicio {
-                padding: 45px 20px;
+                padding: 50px 20px;
             }
 
             .inicio h1 {
-                font-size: 27px;
+                font-size: 28px;
+                line-height: 1.3;
             }
 
             .inicio h2 {
@@ -133,7 +245,7 @@
             }
 
             main {
-                margin: 30px auto;
+                margin: 35px auto;
                 padding: 0 15px;
             }
 
@@ -147,6 +259,17 @@
 
             .apartado p {
                 font-size: 14px;
+                text-align: left;
+            }
+
+            .companeros-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .companero {
+                min-height: 100px;
+                padding: 19px;
             }
 
         }
@@ -282,6 +405,88 @@
 
         </section>
 
+
+        <!-- Apartado 5: Mis compañeros -->
+
+        <section>
+
+            <h2 class="titulo-apartado">
+                Mis compañeros
+            </h2>
+
+            <p class="companeros-descripcion">
+                Conoce las páginas personales de mis compañeros y visita sus proyectos.
+            </p>
+
+            <div class="companeros-grid">
+
+                <a href="https://eduardoisaacrojasjuarez.github.io/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="companero">
+
+                    <h3>Eduardo Isaac Rojas Juarez</h3>
+                    <span>Visitar página web ↗</span>
+
+                </a>
+
+                <a href="https://emelyanccari-ops.github.io"
+                   target="_blank" rel="noopener noreferrer"
+                   class="companero">
+
+                    <h3>Emely Mirella Anccari Lopez</h3>
+                    <span>Visitar página web ↗</span>
+
+                </a>
+
+                <a href="https://dominickapfata-sudo.github.io/dominickrayapfatallaique.github.io/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="companero">
+
+                    <h3>Dominick Ray Apfata Llaique</h3>
+                    <span>Visitar página web ↗</span>
+
+                </a>
+
+                <a href="https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="companero">
+
+                    <h3>Rafael Chirinos Aspauza</h3>
+                    <span>Visitar página web ↗</span>
+
+                </a>
+
+                <a href="https://zafiroquispe-wq.github.io/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="companero">
+
+                    <h3>Zafiro Shantal Quispe Alache</h3>
+                    <span>Visitar página web ↗</span>
+
+                </a>
+
+                <a href="https://nayeliayta-dev.github.io/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="companero">
+
+                    <h3>Nayeli Alexandra Ayta Asqui</h3>
+                    <span>Visitar página web ↗</span>
+
+                </a>
+
+                <a href="https://bre-pilar.github.io/Breshia-del-pilar-peralta-mamani/"
+                   target="_blank" rel="noopener noreferrer"
+                   class="companero">
+
+                    <h3>Breshia del Pilar Peralta Mamani</h3>
+                    <span>Visitar página web ↗</span>
+
+                </a>
+
+            </div>
+
+        </section>
+
     </main>
 
     <footer>
@@ -293,4 +498,3 @@
 </body>
 
 </html>
-
