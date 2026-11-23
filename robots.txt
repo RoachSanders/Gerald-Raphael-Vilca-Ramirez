@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roachsanders.github.io/Gerald-Raphael-Vilca-Ramirez/sitemap.xml
