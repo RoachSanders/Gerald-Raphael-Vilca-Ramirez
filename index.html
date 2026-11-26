@@ -1,23 +1,18 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gerald Raphael Vilca Ramírez | Administración de Empresas</title>
 
-    <meta name="description" content="Página personal de Gerald Raphael Vilca Ramírez, estudiante de Administración de Empresas con interés en finanzas, inversiones, economía y análisis de datos.">
-
+    <meta name="description" content="Conoce a Gerald Raphael Vilca Ramírez, estudiante de Administración de Negocios en la Universidad Católica San Pablo, interesado en finanzas, banca, inversiones y análisis de datos.">
     <meta name="author" content="Gerald Raphael Vilca Ramírez">
     <meta name="theme-color" content="#101722">
 
     <link rel="canonical" href="https://roachsanders.github.io/Gerald-Raphael-Vilca-Ramirez/">
 
     <style>
-
         * {
             box-sizing: border-box;
             scroll-behavior: smooth;
@@ -26,46 +21,26 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background:
-                radial-gradient(circle at 10% 10%, rgba(52, 120, 199, 0.09), transparent 30%),
-                radial-gradient(circle at 90% 70%, rgba(52, 120, 199, 0.07), transparent 30%),
-                #101722;
+            background-color: #101722;
             color: #e8edf5;
         }
 
         /* Presentación */
 
         .inicio {
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(120deg, #192536, #203751, #192536);
-            padding: 75px 20px;
+            background: linear-gradient(120deg, #192536, #203751);
+            padding: 65px 20px;
             border-bottom: 3px solid #3478c7;
         }
 
-        .inicio::before {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: rgba(67, 143, 224, 0.12);
-            filter: blur(65px);
-            right: 10%;
-            top: -170px;
-        }
-
         .contenido-inicio {
-            position: relative;
             max-width: 1000px;
             margin: auto;
         }
 
         .inicio h1 {
-            font-size: 38px;
-            margin-top: 0;
-            margin-bottom: 12px;
-            letter-spacing: 0.4px;
+            font-size: 36px;
+            margin: 0 0 12px;
         }
 
         .inicio h2 {
@@ -76,167 +51,265 @@
         }
 
         .linea {
-            width: 70px;
+            width: 65px;
             height: 4px;
-            background: linear-gradient(90deg, #438fe0, #8eb9ec);
-            border-radius: 5px;
+            background-color: #438fe0;
             margin-top: 25px;
-            box-shadow: 0 0 12px rgba(67, 143, 224, 0.4);
+            border-radius: 5px;
+        }
+
+        /* Navegación */
+
+        nav {
+            background-color: #131e2d;
+            border-bottom: 1px solid #29384a;
+        }
+
+        .navegacion {
+            max-width: 1000px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #b8c4d3;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #70aef0;
         }
 
         /* Contenido principal */
 
         main {
             max-width: 1000px;
-            margin: 45px auto;
+            margin: 40px auto;
             padding: 0 20px;
         }
-
-        /* Títulos de los apartados */
 
         .titulo-apartado {
             color: #70aef0;
             font-size: 21px;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 11px;
         }
-
-        .titulo-apartado::before {
-            content: "";
-            display: inline-block;
-            width: 4px;
-            height: 23px;
-            background-color: #438fe0;
-            border-radius: 5px;
-            box-shadow: 0 0 9px rgba(67, 143, 224, 0.4);
-        }
-
-        /* Recuadros */
 
         .apartado {
-            background: linear-gradient(145deg, #192536, #172333);
-            padding: 27px;
+            background-color: #192536;
+            padding: 25px;
             border: 1px solid #2c3c50;
-            border-radius: 9px;
-            margin-bottom: 35px;
-            min-height: 130px;
-            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+            border-radius: 8px;
+            margin-bottom: 30px;
+            transition: border-color 0.2s;
         }
 
         .apartado:hover {
             border-color: #438fe0;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 22px rgba(52, 120, 199, 0.09);
         }
 
         .apartado p {
             color: #b8c4d3;
             font-size: 15px;
-            line-height: 1.9;
-            margin: 0 0 25px 0;
-            text-align: justify;
+            line-height: 1.8;
+            margin: 0 0 20px;
         }
 
         .apartado p:last-child {
             margin-bottom: 0;
         }
 
-        .apartado strong {
-            color: #d9eaff;
+        strong {
+            color: #dceaff;
         }
 
-        /* Mis compañeros */
+        /* Datos del perfil */
 
-        .companeros-descripcion {
+        .datos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .dato {
+            background-color: #172333;
+            border: 1px solid #2c3c50;
+            padding: 18px;
+            border-radius: 7px;
+        }
+
+        .dato h3 {
+            color: #70aef0;
+            font-size: 14px;
+            margin: 0 0 10px;
+        }
+
+        .dato p {
+            color: #b8c4d3;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* Cursos */
+
+        .cursos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .curso {
+            background-color: #172333;
+            border: 1px solid #2c3c50;
+            border-radius: 8px;
+            padding: 20px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .curso:hover {
+            border-color: #438fe0;
+            transform: translateY(-3px);
+        }
+
+        .curso h3 {
+            color: #e8edf5;
+            font-size: 16px;
+            margin: 0 0 12px;
+        }
+
+        .curso p {
+            color: #b8c4d3;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 0 12px;
+        }
+
+        .profesor {
+            color: #8eb9ec;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .enlace {
+            color: #70aef0;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .enlace:hover {
+            text-decoration: underline;
+        }
+
+        /* Habilidades */
+
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .habilidad {
+            background-color: #203751;
+            color: #a9d0fa;
+            border: 1px solid #345a80;
+            border-radius: 20px;
+            padding: 9px 15px;
+            font-size: 13px;
+        }
+
+        /* Compañeros */
+
+        .compañeros-descripcion {
             color: #b8c4d3;
             font-size: 15px;
             line-height: 1.7;
             margin-bottom: 20px;
         }
 
-        .companeros-grid {
+        .compañeros-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
-            margin-bottom: 35px;
         }
 
-        .companero {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 115px;
-            padding: 21px;
-            background: linear-gradient(145deg, #192536, #172333);
+        .compañero {
+            display: block;
+            background-color: #192536;
             border: 1px solid #2c3c50;
-            border-radius: 9px;
+            border-radius: 8px;
+            padding: 18px;
             text-decoration: none;
-            overflow: hidden;
-            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+            transition: 0.2s;
         }
 
-        .companero::before {
-            content: "";
-            position: absolute;
-            width: 85px;
-            height: 85px;
-            border-radius: 50%;
-            background: rgba(67, 143, 224, 0.08);
-            right: -30px;
-            top: -30px;
-            transition: transform 0.3s;
-        }
-
-        .companero:hover {
-            transform: translateY(-4px);
+        .compañero:hover {
             border-color: #438fe0;
-            box-shadow: 0 8px 22px rgba(52, 120, 199, 0.13);
+            transform: translateY(-3px);
         }
 
-        .companero:hover::before {
-            transform: scale(1.5);
-        }
-
-        .companero h3 {
-            position: relative;
+        .compañero h3 {
             color: #e8edf5;
-            font-size: 16px;
-            line-height: 1.5;
-            margin: 0 0 17px 0;
+            font-size: 15px;
+            margin: 0 0 12px;
         }
 
-        .companero span {
-            position: relative;
+        .compañero span {
             color: #70aef0;
             font-size: 13px;
-            font-weight: bold;
+        }
+
+        /* Contacto profesional */
+
+        .contacto-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .contacto-enlace {
+            display: inline-block;
+            background-color: #203751;
+            border: 1px solid #345a80;
+            border-radius: 6px;
+            padding: 11px 16px;
+            color: #a9d0fa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .contacto-enlace:hover {
+            background-color: #294968;
+            border-color: #438fe0;
         }
 
         /* Pie de página */
 
         footer {
             text-align: center;
-            padding: 28px 20px;
+            padding: 25px;
             border-top: 1px solid #29384a;
             color: #8190a3;
             font-size: 13px;
-            background: linear-gradient(180deg, #101722, #0c121b);
+            background-color: #0c121b;
         }
 
-        /* Adaptación para celulares */
+        /* Celulares */
 
         @media (max-width: 650px) {
-
             .inicio {
-                padding: 50px 20px;
+                padding: 45px 20px;
             }
 
             .inicio h1 {
-                font-size: 28px;
+                font-size: 27px;
                 line-height: 1.3;
             }
 
@@ -245,7 +318,7 @@
             }
 
             main {
-                margin: 35px auto;
+                margin: 30px auto;
                 padding: 0 15px;
             }
 
@@ -259,242 +332,372 @@
 
             .apartado p {
                 font-size: 14px;
-                text-align: left;
             }
 
-            .companeros-grid {
+            .datos-grid,
+            .cursos-grid,
+            .compañeros-grid {
                 grid-template-columns: 1fr;
-                gap: 12px;
             }
 
-            .companero {
-                min-height: 100px;
-                padding: 19px;
+            .navegacion {
+                gap: 13px;
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
-    <!-- Presentación principal -->
+    <!-- Presentación -->
 
     <header class="inicio">
-
         <div class="contenido-inicio">
-
             <h1>Gerald Raphael Vilca Ramírez</h1>
-
-            <h2>Administración de Empresas - Finanzas</h2>
-
+            <h2>Administración de Negocios - Finanzas</h2>
             <div class="linea"></div>
-
         </div>
-
     </header>
+
+    <!-- Menú -->
+
+    <nav>
+        <div class="navegacion">
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#formacion">Formación</a>
+            <a href="#cursos">Cursos y profesores</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#intereses">Intereses</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#compañeros">Compañeros</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
 
     <main>
 
-        <!-- Apartado 1 -->
+        <!-- Sobre mí -->
 
-        <section>
-
-            <h2 class="titulo-apartado">
-                Sobre mí
-            </h2>
+        <section id="sobre-mi">
+            <h2 class="titulo-apartado">Sobre mí</h2>
 
             <div class="apartado">
-
                 <p>
-                    Soy Gerald Raphael Vilca Ramírez, estudiante de Administración de Empresas en la Universidad Católica San Pablo, actualmente me encuentro en el 6to semestre de mi carrera, centrándome en la rama de Finanzas, esto debido a que me resulta interesante la gestión del dinero de una empresa con el objetivo de optimizar y mejorar la utilidad obtenida.
+                    Soy Gerald Raphael Vilca Ramírez, estudiante de Administración de Negocios en la Universidad Católica San Pablo, me interesa especialmente el área financiera y conocer cómo funcionan las empresas y las instituciones bancarias.
                 </p>
 
-            </div>
+                <p>
+                    A futuro, me gustaría desarrollar mi carrera profesional en el sector bancario, principalmente en el área de finanzas, participando en actividades relacionadas con la gestión de recursos, el análisis de información financiera y la toma de decisiones.
+                </p>
 
+                <p>
+                    También disfruto aprender por mi cuenta sobre las instituciones financieras, la forma en que administran sus recursos y los factores que influyen en sus decisiones económicas.
+                </p>
+            </div>
         </section>
 
+        <!-- Formación académica -->
 
-        <!-- Apartado 2 -->
-
-        <section>
-
-            <h2 class="titulo-apartado">
-                Mis intereses
-            </h2>
+        <section id="formacion">
+            <h2 class="titulo-apartado">Formación académica</h2>
 
             <div class="apartado">
-
                 <p>
-                    <strong>Finanzas corporativas:</strong> Me interesa aprender cómo las empresas logran administrar sus recursos financieros de manera eficiente y cómo es que logran tomar decisiones que incrementan su rentabilidad y potencian su crecimiento, me interesa mayormente los proyectos de inversión, la planificación presupuestaria y el análisis de los estados financieros.
+                    <strong>Universidad:</strong> Universidad Católica San Pablo
                 </p>
 
                 <p>
-                    <strong>Inversiones y mercados financieros:</strong> Me intriga saber más de los mercados financieros, observando cuáles son los factores que pueden llegar a cambiar el valor de los activos, es curioso porque incluso hay cosas que, pese a que no están relacionados directamente a la empresa, igualmente llegan a ser afectados, también me gusta analizar las acciones, bonos, fondos de inversión, entre otros, incluso la historia que hay detrás de los mismos, cómo su rentabilidad de los mismos fue afectando al mundo y a la misma gente que confía en ellos.
+                    <strong>Carrera:</strong> Administración de Negocios
                 </p>
 
                 <p>
-                    <strong>Economía:</strong> Es interesante ver cómo realmente funciona la economía de un país y cómo el mismo gobierno a base de sus decisiones afecta a la misma, incluso en el Perú, pese a que anteriormente tuvo problemas económicos gigantes, me gustaría saber cómo es que lograron estabilizar a la economía y pudieron mantenerla hasta nuestros días, son muchos factores que pueden afectar a la misma, aunque la gente suele acusar a personas en concreto, personalmente opino que primero deberíamos llegar al fondo del asunto antes de acreditar un hecho a alguien.
+                    <strong>Área de interés:</strong> Finanzas
                 </p>
-
-                <p>
-                    <strong>Comercio internacional:</strong> Tanto a pequeña como en gran escala, desde las pequeñas compras en plataformas de AliExpress o Alibaba, hasta los grandes comercios que manejan estos negocios de manera masiva, nadie puede negar que este tipo de negocio es bastante rentable, la exportación e importación es bastante beneficiosa si sabes sacarle el máximo provecho, países como China saben eso, convertir materia prima en productos, que dependiendo de la empresa puede ser de calidad, para luego ser vendidos alrededor del mundo.
-                </p>
-
             </div>
-
         </section>
 
+        <!-- Cursos y profesores -->
 
-        <!-- Apartado 3 -->
+        <section id="cursos">
+            <h2 class="titulo-apartado">Cursos y profesores</h2>
 
-        <section>
+            <div class="cursos-grid">
 
-            <h2 class="titulo-apartado">
-                Hobbies
-            </h2>
+                <article class="curso">
+                    <h3>Metafísica</h3>
+                    <span class="profesor">Profesor: Fabrizio Renzi</span>
+                </article>
+
+                <article class="curso">
+                    <h3>Investigación de Operaciones</h3>
+                    <span class="profesor">Profesora: Fiorella María Rendón García</span>
+
+                    <a class="enlace"
+                       href="https://www.linkedin.com/in/fiorella-mar%C3%ADa-rend%C3%B3n-garc%C3%ADa-7aa9b7374/"
+                       target="_blank" rel="noopener noreferrer">
+                        Ver perfil de LinkedIn ↗
+                    </a>
+                </article>
+
+                <article class="curso">
+                    <h3>Análisis de la Realidad Peruana</h3>
+                    <span class="profesor">Profesor: Antonio Besich Adrian</span>
+
+                    <a class="enlace"
+                       href="https://www.linkedin.com/in/antonio-besich-adrian-9827aa376/"
+                       target="_blank" rel="noopener noreferrer">
+                        Ver perfil de LinkedIn ↗
+                    </a>
+                </article>
+
+                <article class="curso">
+                    <h3>Historia de Occidente II</h3>
+                    <span class="profesor">Profesora: Rosmery Debora Postigo Quiroz de Bocchio</span>
+                </article>
+
+                <article class="curso">
+                    <h3>Introducción a Ciencias de la Computación</h3>
+                    <span class="profesor">Profesor: Ernesto Cuadros Vargas</span>
+
+                    <a class="enlace"
+                       href="https://www.linkedin.com/in/ecuadrosv/"
+                       target="_blank" rel="noopener noreferrer">
+                        Ver perfil de LinkedIn ↗
+                    </a>
+                </article>
+
+                <article class="curso">
+                    <h3>Estadística para Negocios</h3>
+                    <span class="profesor">Profesor: Daniel Huanca Mosaja</span>
+
+                    <a class="enlace"
+                       href="https://peru.misprofesores.com/profesores/Daniel-Huanca-Mosaja_14408"
+                       target="_blank" rel="noopener noreferrer">
+                        Ver perfil del profesor ↗
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+
+        <section id="habilidades">
+            <h2 class="titulo-apartado">Habilidades y herramientas</h2>
 
             <div class="apartado">
+                <div class="habilidades">
+                    <span class="habilidad">Microsoft Excel</span>
+                    <span class="habilidad">Power BI</span>
+                    <span class="habilidad">RStudio</span>
+                    <span class="habilidad">Python básico</span>
+                    <span class="habilidad">Análisis de datos</span>
+                </div>
 
-                <p>
-                    <strong>Videojuegos:</strong> En este caso no tengo un género en particular, puede ser un MMORPG, estrategia, extraction shooter, mundo abierto, aunque he de decir que todos comparten una cosa en común, todos esos tienen una divisa, es decir, un sistema monetario que está ligado a la cuenta, por lo que honestamente mi objetivo principal es obtener mayor poder adquisitivo, tanto la divisa como recursos, incluso si ese no era el objetivo inicial del juego, incluso me aprendo e ideo formas de obtener la mayor rentabilidad posible al tiempo que le dedico.
+                <p style="margin-top: 22px;">
+                    Me gusta trabajar con herramientas que permiten organizar información, analizar datos y presentar resultados de una manera clara, he tenido la oportunidad de utilizar Excel y Power BI, además de conocer herramientas como RStudio y Python para trabajar con datos.
                 </p>
 
-                <p>
-                    <strong>Gelsoft:</strong> Me interesa el gelsoft como actividad recreativa, especialmente los escenarios de simulación táctica, el trabajo en equipo y la planificación de estrategias, también disfruto conocer el equipamiento, sus características técnicas y las posibilidades de mejorar su funcionamiento.
-                </p>
+                <div class="datos-grid">
+                    <div class="dato">
+                        <h3>Español</h3>
+                        <p>Nivel C2</p>
+                    </div>
 
-                <p>
-                    <strong>Música:</strong> Disfruto escuchar música de distintos géneros y descubrir nuevas canciones y artistas, la música es una de las actividades que suelo utilizar para acompañar mis momentos de descanso y entretenimiento.
-                </p>
-
+                    <div class="dato">
+                        <h3>Inglés</h3>
+                        <p>Nivel C1</p>
+                    </div>
+                </div>
             </div>
-
         </section>
 
+        <!-- Intereses -->
 
-        <!-- Apartado 4 -->
-
-        <section>
-
-            <h2 class="titulo-apartado">
-                Conocimientos y herramientas
-            </h2>
+        <section id="intereses">
+            <h2 class="titulo-apartado">Mis intereses</h2>
 
             <div class="apartado">
-
                 <p>
-                    <strong>Power BI:</strong> Sé utilizar Power BI para crear visualizaciones de datos y paneles interactivos, lo cual me permite analizar información de manera efectiva y tomar decisiones basadas en datos.
+                    <strong>Finanzas corporativas:</strong> Me interesa entender cómo las empresas administran sus recursos y qué decisiones les permiten mejorar su rentabilidad y crecer, me llaman especialmente la atención los proyectos de inversión, la planificación de presupuestos y el análisis de estados financieros.
                 </p>
 
                 <p>
-                    <strong>RStudio:</strong> Utilizo RStudio como entorno de desarrollo para análisis de datos y programación en R, lo que me permite realizar visualizaciones y modelos estadísticos de manera eficiente.
+                    <strong>Inversiones y mercados financieros:</strong> Me gusta aprender sobre los mercados financieros y observar cómo distintos factores pueden influir en el valor de los activos, también me interesa analizar acciones, bonos y fondos de inversión, así como conocer la historia detrás de ellos y el impacto que han tenido en la economía y en las personas que invierten.
                 </p>
 
                 <p>
-                    <strong>Python básico:</strong> Tengo conocimientos básicos en Python, como lo es la manipulación de datos y creación de scripts simples.
+                    <strong>Economía:</strong> Me parece interesante comprender cómo funciona la economía de un país y de qué manera las decisiones del gobierno pueden influir en ella, en el caso del Perú, me llama la atención conocer cómo se logró superar parte de los problemas económicos del pasado y qué factores han permitido mantener cierta estabilidad, creo que antes de atribuir los resultados a una sola persona o decisión es importante analizar el contexto completo.
                 </p>
 
                 <p>
-                    <strong>Excel:</strong> Tengo conocimientos en Excel, incluyendo la creación de tablas, gráficos y el uso de funciones avanzadas para el análisis de datos.
+                    <strong>Comercio internacional:</strong> Me interesa el comercio internacional tanto en pequeña como en gran escala, desde las compras en plataformas como AliExpress o Alibaba hasta las operaciones de importación y exportación entre empresas y países, me parece interesante cómo algunos países, como China, han desarrollado industrias capaces de transformar materias primas en productos que luego llegan a distintos mercados del mundo.
                 </p>
-
             </div>
-
         </section>
 
+        <!-- Hobbies -->
 
-        <!-- Apartado 5: Mis compañeros -->
+        <section id="hobbies">
+            <h2 class="titulo-apartado">Hobbies</h2>
 
-        <section>
+            <div class="apartado">
+                <p>
+                    <strong>Videojuegos:</strong> No tengo un género favorito en particular, disfruto desde los MMORPG y juegos de estrategia hasta los extraction shooters y los mundos abiertos, algo que suelo encontrar en muchos de ellos son sus sistemas económicos, monedas y recursos, me gusta buscar formas de conseguir más con el tiempo que invierto, comparar alternativas y encontrar maneras de aprovechar mejor los recursos disponibles.
+                </p>
 
-            <h2 class="titulo-apartado">
-                Mis compañeros
-            </h2>
+                <p>
+                    <strong>Gelsoft:</strong> Me interesa el gelsoft como actividad recreativa, especialmente los escenarios de simulación táctica, disfruto el trabajo en equipo, la planificación de estrategias y conocer más sobre el equipamiento, sus características técnicas y las posibilidades de mejorar su funcionamiento.
+                </p>
 
-            <p class="companeros-descripcion">
-                Conoce las páginas personales de mis compañeros y visita sus proyectos.
+                <p>
+                    <strong>Música:</strong> Disfruto escuchar música de distintos géneros y descubrir nuevas canciones y artistas, es una de las cosas que suelo hacer durante mis momentos de descanso y mientras realizo otras actividades.
+                </p>
+            </div>
+        </section>
+
+        <!-- Compañeros -->
+
+        <section id="compañeros">
+            <h2 class="titulo-apartado">Mis compañeros</h2>
+
+            <p class="compañeros-descripcion">
+                También puedes visitar las páginas personales de algunos de mis compañeros de la universidad, cada una refleja sus propios intereses y su forma de presentarse.
             </p>
 
-            <div class="companeros-grid">
+            <div class="compañeros-grid">
 
-                <a href="https://eduardoisaacrojasjuarez.github.io/"
-                   target="_blank" rel="noopener noreferrer"
-                   class="companero">
-
+                <a class="compañero" href="https://eduardoisaacrojasjuarez.github.io/" target="_blank" rel="noopener noreferrer">
                     <h3>Eduardo Isaac Rojas Juarez</h3>
                     <span>Visitar página web ↗</span>
-
                 </a>
 
-                <a href="https://emelyanccari-ops.github.io"
-                   target="_blank" rel="noopener noreferrer"
-                   class="companero">
-
+                <a class="compañero" href="https://emelyanccari-ops.github.io" target="_blank" rel="noopener noreferrer">
                     <h3>Emely Mirella Anccari Lopez</h3>
                     <span>Visitar página web ↗</span>
-
                 </a>
 
-                <a href="https://dominickapfata-sudo.github.io/dominickrayapfatallaique.github.io/"
-                   target="_blank" rel="noopener noreferrer"
-                   class="companero">
-
+                <a class="compañero" href="https://dominickapfata-sudo.github.io/dominickrayapfatallaique.github.io/" target="_blank" rel="noopener noreferrer">
                     <h3>Dominick Ray Apfata Llaique</h3>
                     <span>Visitar página web ↗</span>
-
                 </a>
 
-                <a href="https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/"
-                   target="_blank" rel="noopener noreferrer"
-                   class="companero">
-
+                <a class="compañero" href="https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/" target="_blank" rel="noopener noreferrer">
                     <h3>Rafael Chirinos Aspauza</h3>
                     <span>Visitar página web ↗</span>
-
                 </a>
 
-                <a href="https://zafiroquispe-wq.github.io/"
-                   target="_blank" rel="noopener noreferrer"
-                   class="companero">
-
+                <a class="compañero" href="https://zafiroquispe-wq.github.io/" target="_blank" rel="noopener noreferrer">
                     <h3>Zafiro Shantal Quispe Alache</h3>
                     <span>Visitar página web ↗</span>
-
                 </a>
 
-                <a href="https://nayeliayta-dev.github.io/"
-                   target="_blank" rel="noopener noreferrer"
-                   class="companero">
-
+                <a class="compañero" href="https://nayeliayta-dev.github.io/" target="_blank" rel="noopener noreferrer">
                     <h3>Nayeli Alexandra Ayta Asqui</h3>
                     <span>Visitar página web ↗</span>
-
                 </a>
 
-                <a href="https://bre-pilar.github.io/Breshia-del-pilar-peralta-mamani/"
-                   target="_blank" rel="noopener noreferrer"
-                   class="companero">
-
+                <a class="compañero" href="https://bre-pilar.github.io/Breshia-del-pilar-peralta-mamani/" target="_blank" rel="noopener noreferrer">
                     <h3>Breshia del Pilar Peralta Mamani</h3>
                     <span>Visitar página web ↗</span>
+                </a>
 
+                <a class="compañero" href="https://alexiacayo19.github.io" target="_blank" rel="noopener noreferrer">
+                    <h3>Alexia Alisson Cayo Ccasa</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://nayeliordonez.github.io/Nayeli-Ordonez-Asto/" target="_blank" rel="noopener noreferrer">
+                    <h3>Nayeli Yadira Ordoñez Asto</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://polarberto.github.io/EDGAR-SEBASTIAN-CALLE-TORRES/" target="_blank" rel="noopener noreferrer">
+                    <h3>Edgar Sebastian Calle Torres</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://francoabdielsalinasrondon.github.io" target="_blank" rel="noopener noreferrer">
+                    <h3>Franco Abdiel Salinas Rondon</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://carlosfabianhuarachihumora.github.io" target="_blank" rel="noopener noreferrer">
+                    <h3>Carlos Fabian Huarachi Humora</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://genesismollocondo-source.github.io/" target="_blank" rel="noopener noreferrer">
+                    <h3>Génesis Xiomara Mollocondo Kana</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://chiaraticona-source.github.io/chiara-ticona.github.io/" target="_blank" rel="noopener noreferrer">
+                    <h3>Chiara Valentina Ticona Chata</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://sebasochoa.github.io" target="_blank" rel="noopener noreferrer">
+                    <h3>Sebastian Andre Ochoa Ortiz</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://fernandagzcj.github.io/fernandagabrielazunigacamacho.github.io/" target="_blank" rel="noopener noreferrer">
+                    <h3>Fernanda Zuñiga</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://andrea-yadhira-portafolio.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <h3>Andrea Yadhira Paredes Meza</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://francoluisurcapazavalencia.github.io/" target="_blank" rel="noopener noreferrer">
+                    <h3>Franco Urcapaza Valencia</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://omarpalomino-max.github.io/mi-primera-pagina-web/" target="_blank" rel="noopener noreferrer">
+                    <h3>Omar Geancarlo Palomino Molina</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://diegogarciaaguilar-ui.github.io/pagina/" target="_blank" rel="noopener noreferrer">
+                    <h3>Diego Garcia Aguilar</h3>
+                    <span>Visitar página web ↗</span>
+                </a>
+
+                <a class="compañero" href="https://francocarlooss.github.io/francocarlooss.github.io./" target="_blank" rel="noopener noreferrer">
+                    <h3>Franco Carlos</h3>
+                    <span>Visitar página web ↗</span>
                 </a>
 
             </div>
+        </section>
 
+        <!-- Contacto profesional -->
+
+        <section id="contacto">
+            <h2 class="titulo-apartado">Contacto profesional</h2>
+
+            <div class="apartado">
+                <p>Este es mi perfil de LinkedIn</p>
+
+                <div class="contacto-links">
+                    <a class="contacto-enlace"
+                       href="https://www.linkedin.com/in/gerald-raphael-vilca-ram%C3%ACrez-3b755b267/"
+                       target="_blank" rel="noopener noreferrer">
+                        Mi perfil de LinkedIn ↗
+                    </a>
+                </div>
+            </div>
         </section>
 
     </main>
 
     <footer>
-
         © 2026 Gerald Raphael Vilca Ramírez
-
     </footer>
 
 </body>
-
 </html>
